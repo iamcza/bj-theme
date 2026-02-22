@@ -1,87 +1,36 @@
-/* ============================================
-   VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
-   ============================================ */
-
 :root {
-    /* Paleta de cores */
     --bg-primary: #0f0f12;
     --bg-secondary: #1a1a1f;
     --bg-tertiary: #252530;
     --text-primary: #e8e8e8;
     --text-secondary: #a8a8b8;
-    --text-muted: #7a7a8e;
-    
-    /* Acentos */
     --accent-primary: #6366f1;
     --accent-secondary: #8b5cf6;
-    --accent-gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-    
-    /* Bordas */
     --border-subtle: #333344;
     --border-medium: #404050;
-    
-    /* Sombras */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
-    
-    /* Espaçamento */
-    --spacing-xs: 4px;
-    --spacing-sm: 8px;
-    --spacing-md: 12px;
-    --spacing-lg: 16px;
-    --spacing-xl: 24px;
-    
-    /* Raio de borda */
     --radius-sm: 6px;
     --radius-md: 12px;
-    --radius-lg: 16px;
-    --radius-full: 50%;
-    
-    /* Transições */
     --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    
-    /* Tipografia */
-    --font-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-    --font-size-base: 14px;
-    --font-size-sm: 12px;
-    --font-size-xs: 11px;
-}
-
-/* ============================================
-   ESTILOS GLOBAIS
-   ============================================ */
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
-    font-size: var(--font-size-base);
+    font-size: 11px;
     color: var(--text-secondary);
-    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-    font-family: var(--font-base);
-    overflow-wrap: break-word;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
     min-width: 950px;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    overflow-wrap: break-word;
+    line-height: 1.5;
 }
 
-/* ============================================
-   ELEMENTOS SEMÂNTICOS
-   ============================================ */
-
 a {
-    color: var(--accent-primary);
     text-decoration: none;
     border: none;
+    color: var(--accent-primary);
     transition: color var(--transition-fast);
 }
 
@@ -90,50 +39,61 @@ a:hover {
     text-decoration: underline;
 }
 
-a:focus-visible {
-    outline: 2px solid var(--accent-primary);
-    outline-offset: 2px;
+a.similar_artist {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    display: inline-block;
+    padding: 6px 12px;
+    color: #fff;
+    border: 1px solid var(--accent-primary);
     border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+a.similar_artist:hover {
+    background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.similar_artist_header {
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border: none;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
 }
 
 h1, h2, h3, h4 {
-    margin: var(--spacing-md) 0;
+    margin: 12px 0;
     font-weight: 600;
     color: var(--text-primary);
     letter-spacing: -0.5px;
 }
 
-h1 {
-    font-size: 28px;
-}
-
 h2 {
-    font-size: 20px;
     text-align: center;
-    background: var(--accent-gradient);
+    font-size: 18px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-h3 {
-    font-size: 18px;
-}
-
 h4 {
-    font-size: var(--font-size-xs);
+    font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     opacity: 0.8;
 }
 
 p {
-    margin: var(--spacing-md) 0;
+    margin: 12px 0;
     color: var(--text-secondary);
 }
 
 li {
-    margin: var(--spacing-sm) 0;
+    margin: 8px 0;
     color: var(--text-secondary);
 }
 
@@ -141,109 +101,65 @@ ul {
     padding-left: 20px;
 }
 
-ul.thin {
-    margin: 0 0 0 25px;
-    padding: 0;
-    list-style: none;
-}
-
-ul.thin li {
-    margin: 0;
-    padding: 0;
-}
-
-img {
-    border: none;
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* ============================================
-   FORMULÁRIOS
-   ============================================ */
-
-input,
-textarea {
-    padding: var(--spacing-md) var(--spacing-md);
+input {
+    padding: 10px 12px;
     background: var(--bg-secondary);
     border: 1px solid var(--border-medium);
     color: var(--text-primary);
     border-radius: var(--radius-sm);
     transition: all var(--transition-fast);
+    box-sizing: border-box;
     font-size: 13px;
-    font-family: inherit;
 }
 
-input {
-    width: auto;
+input:hover {
+    border-color: var(--accent-primary);
+    background: var(--bg-tertiary);
 }
 
 textarea {
+    padding: 10px 12px;
     width: 100%;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-medium);
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+    box-sizing: border-box;
+    font-size: 13px;
+    font-family: inherit;
     resize: vertical;
 }
 
-input:hover,
 textarea:hover {
     border-color: var(--accent-primary);
     background: var(--bg-tertiary);
 }
 
-input:focus,
-textarea:focus,
-form input:focus,
-form textarea:focus,
-form button:focus {
+.BBCodeToolbar-icon {
+  height: 20px;
+  width: 20px;
+  fill: #777;
+}
+
+input:focus, form input:focus, form textarea:focus, textarea:focus, form button:focus {
     outline: none;
     border-color: var(--accent-primary);
     background: var(--bg-secondary);
     box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
-input:focus-visible,
-textarea:focus-visible {
-    border-color: var(--accent-secondary);
+img {
+    border: none;
+    max-width: 100%;
+    height: auto;
 }
 
-.BBCodeToolbar-icon {
-    height: 20px;
-    width: 20px;
-    fill: var(--text-muted);
-}
-
-/* ============================================
-   CORES DE CLASSIFICAÇÃO
-   ============================================ */
-
-.r01, .r02, .r03 {
-    color: #ff4757;
-    font-weight: 500;
-}
-
-.r04, .r05, .r06, .r07 {
-    color: #ff8c42;
-    font-weight: 500;
-}
-
-.r08, .r09 {
-    color: #ffa502;
-    font-weight: 500;
-}
-
-.r10 {
-    color: #7ac943;
-    font-weight: 500;
-}
-
-.r20, .r50, .r99 {
-    color: #2abc57;
-    font-weight: 500;
-}
-
-/* ============================================
-   TAMANHOS DE FONTE CUSTOMIZADOS
-   ============================================ */
+.r01, .r02, .r03 { color: #ff4757; font-weight: 500; }
+.r04, .r05, .r06, .r07 { color: #ff8c42; font-weight: 500; }
+.r08, .r09 { color: #ffa502; font-weight: 500; }
+.r10 { color: #7ac943; font-weight: 500; }
+.r20, .r50, .r99 { color: #2abc57; font-weight: 500; }
 
 span.size1 { font-size: 0.75em; }
 span.size2 { font-size: 1em; }
@@ -256,26 +172,20 @@ span.size8 { font-size: 2.5em; }
 span.size9 { font-size: 2.75em; }
 span.size10 { font-size: 3em; }
 
-span.size1,
-span.size2,
-span.size3,
-span.size4,
-span.size5,
-span.size6,
-span.size7,
-span.size8,
-span.size9,
-span.size10 {
+span.size1, span.size2, span.size3, span.size4, span.size5, 
+span.size6, span.size7, span.size8, span.size9, span.size10 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-/* ============================================
-   LAYOUT PRINCIPAL
-   ============================================ */
+ul.thin {
+    margin: 0 0 0 25px;
+    padding: 0;
+    list-style: none;
+}
 
-#wrapper {
-    width: 100%;
-    margin: 0 auto;
+ul.thin li {
+    margin: 0;
+    padding: 0;
 }
 
 #header {
@@ -294,21 +204,22 @@ span.size10 {
     top: 60px;
 }
 
+#wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
 #footer {
     margin-top: 140px;
     width: 100%;
     text-align: center;
-    padding: var(--spacing-xl) 0;
+    padding: 24px 0;
     color: #fff;
     background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
     border-top: 1px solid var(--border-medium);
-    box-shadow: inset var(--shadow-lg);
+    box-shadow: var(--shadow-lg) inset;
     clear: both;
 }
-
-/* ============================================
-   LOGO
-   ============================================ */
 
 #logo {
     width: 0%;
@@ -326,12 +237,9 @@ span.size10 {
 }
 
 #logo a:hover {
+    border: none;
     transform: scale(1.05);
 }
-
-/* ============================================
-   MENU PRINCIPAL
-   ============================================ */
 
 #menu {
     background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
@@ -371,7 +279,7 @@ span.size10 {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--accent-gradient);
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
     transition: width var(--transition-normal);
 }
 
@@ -435,199 +343,138 @@ span.size10 {
 
 #menudrop ul ul a {
     width: 100%;
-    padding: var(--spacing-md) var(--spacing-lg);
-    line-height: auto;
+    line-height: 120%;
+    padding: 10px 15px;
 }
 
-#menudrop ul ul a::after {
-    display: none;
-}
-
-#menudrop ul ul a:hover {
-    background: var(--bg-tertiary);
-    text-decoration: none;
-}
-
-/* ============================================
-   BOTÕES E LINKS ESPECIAIS
-   ============================================ */
-
-a.similar_artist {
-    background: var(--accent-gradient);
-    display: inline-block;
-    padding: 6px 12px;
-    color: #fff;
-    border: 1px solid var(--accent-primary);
-    border-radius: var(--radius-sm);
-    transition: all var(--transition-fast);
-    font-weight: 500;
-}
-
-a.similar_artist:hover {
-    background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
-
-.similar_artist_header {
-    color: #fff;
-    background: var(--accent-gradient);
-    border: none;
-    padding: var(--spacing-md) var(--spacing-md);
-    border-radius: var(--radius-sm);
-    font-weight: 600;
-    display: inline-block;
-    transition: all var(--transition-fast);
-}
-
-.similar_artist_header:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-1px);
-}
-
-/* ============================================
-   CAIXAS DE INFORMAÇÃO
-   ============================================ */
-
-a.BJinfoBox {
-    position: relative;
-    display: inline;
-    cursor: help;
-}
-
-a.BJinfoBox span,
-form a.BJinfoBox span,
-.post_return a.BJinfoBox span {
-    position: absolute;
-    min-width: 200px;
-    color: #fff;
-    background: var(--accent-gradient);
-    line-height: 1.5;
-    visibility: hidden;
-    border-radius: var(--radius-md);
-    text-decoration: none;
-    padding: var(--spacing-md);
-    opacity: 0;
-    bottom: 0;
-    transition: opacity var(--transition-normal), visibility var(--transition-normal);
+#userinfo {
+    background: linear-gradient(90deg, rgba(15, 15, 18, 0.95), rgba(26, 26, 31, 0.95));
+    position: fixed;
+    top: 32px;
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
     box-shadow: var(--shadow-md);
     z-index: 1000;
+    border-bottom: 1px solid var(--border-medium);
+    backdrop-filter: blur(10px);
 }
 
-a.BJinfoBox span {
-    margin-left: -25px;
+#userinfo ul {
+    display: inline-flex;
+    margin: 0 0.8%;
+    padding: 4px;
+    align-items: center;
 }
 
-.post_return a.BJinfoBox span {
-    margin-left: -50px;
-}
-
-a:hover.BJinfoBox span {
-    visibility: visible;
-    bottom: 20px;
-    left: 40%;
-    margin-left: -76px;
-    z-index: 3;
-    opacity: 1;
-}
-
-/* ============================================
-   TOOLTIPS COM DATA-TOOLTIP
-   ============================================ */
-
-[data-tooltip] {
+#userinfo ul li {
     position: relative;
-    z-index: 2;
-    cursor: help;
-}
-
-[data-tooltip]::after,
-[data-tooltip]::before {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity var(--transition-normal), visibility var(--transition-normal);
-}
-
-[data-tooltip]::before {
-    position: absolute;
-    bottom: 150%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 8px;
-    padding: 8px 12px;
-    min-width: 100px;
-    border-radius: var(--radius-sm);
-    background: var(--accent-gradient);
-    color: #fff;
-    content: attr(data-tooltip);
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.4;
-    font-weight: 500;
-    white-space: nowrap;
-    box-shadow: var(--shadow-md);
-}
-
-[data-tooltip]::after {
-    position: absolute;
-    bottom: calc(150% - 8px);
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-top-color: var(--accent-primary);
-    content: " ";
-    font-size: 0;
-    line-height: 0;
-}
-
-[data-tooltip]:hover::after,
-[data-tooltip]:hover::before {
-    visibility: visible;
-    opacity: 1;
-}
-
-a[data-tooltip]:hover {
-    text-decoration: none;
-}
-
-/* ============================================
-   CAIXA INTERNA
-   ============================================ */
-
-.internalbox {
-    background: var(--accent-gradient);
-    font-size: var(--font-size-xs);
-    font-weight: 500;
-    padding: var(--spacing-md);
-    color: #fff;
-    border-radius: var(--radius-md);
-    transition: all var(--transition-normal);
-    cursor: help;
-    border: none;
-    box-shadow: var(--shadow-sm);
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-sm);
+    margin: 0 0.5em;
+    line-height: 20px;
+    vertical-align: middle;
+    padding: 2px 4px;
+    color: var(--text-secondary);
 }
 
-.internalbox:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
+#userinfo a {
+    color: var(--accent-primary);
+    transition: color var(--transition-fast);
 }
 
-.internalbox::before {
-    content: "ⓘ";
-    font-weight: 700;
-    font-size: 12px;
-    flex-shrink: 0;
+#userinfo a:hover {
+    color: var(--accent-secondary);
+    text-decoration: underline;
 }
 
-/* ============================================
-   BOTÃO FLUTUANTE
-   ============================================ */
+#userinfo b a {
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+#searchbars {
+    position: absolute;
+    top: 270px;
+    width: 100%;
+    text-align: center;
+    padding: 4px 0;
+    min-width: 850px;
+}
+
+#searchbars input {
+    background-color: #1e1e1e;
+    border: 1px solid #404448;
+    position: relative;
+    font-size: 95%;
+    color: #3b4c59;
+    box-shadow: 1px 3px 11px 0px #131313;
+    padding: 5px 10px 4px;
+}
+
+#searchbars ul {
+    margin: 0 auto;
+    display: block;
+}
+
+#searchbars ul li {
+    display: inline;
+    margin: 0 1px;
+    list-style: none;
+    position: relative;
+}
+
+#searchbars ul li ul {
+    display: block;
+    position: absolute;
+    top: 1em;
+    left: 0;
+    z-index: 1000;
+    width: 12em;
+    margin-top: 12px;
+}
+
+#searchbars ul li ul li {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    background: #303030;
+}
+
+#searchbars ul li ul li.highlight {
+    background: #454545;
+}
+
+#searchbars ul li form {
+    display: inline;
+}
+
+#alerts {
+    position: relative;
+    margin-top: 32px;
+    margin-bottom: -60px;
+    padding: 10px 0;
+    width: 100%;
+    background: var(--bg-primary);
+    min-width: 850px;
+}
+
+#alerts a {
+    color: var(--accent-primary);
+}
+
+.alertbar {
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+    text-align: center;
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    margin: 8px 0;
+    box-shadow: var(--shadow-sm);
+}
 
 #irfinal {
     position: fixed;
@@ -636,15 +483,13 @@ a[data-tooltip]:hover {
     cursor: pointer;
     width: 40px;
     height: 40px;
-    background: var(--accent-gradient);
+    background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
     text-indent: -9999px;
     display: none;
-    border-radius: var(--radius-full);
-    border: none;
+    border-radius: 50%;
     box-shadow: var(--shadow-md);
     transition: all var(--transition-normal);
-    align-items: center;
-    justify-content: center;
+    border: none;
 }
 
 #irfinal span {
@@ -663,9 +508,111 @@ a[data-tooltip]:hover {
     box-shadow: var(--shadow-lg);
 }
 
-/* ============================================
-   CARROSSEL / SLIDER
-   ============================================ */
+.homesldframe {
+    height: 350px;
+    width: 250px;
+    left: -12px;
+    top: -4px;
+    position: relative;
+}
+
+a.BJinfoBox {
+    position: relative;
+    display: inline;
+    cursor: help;
+}
+
+a.BJinfoBox span,
+form a.BJinfoBox span,
+.post_return a.BJinfoBox span {
+    position: absolute;
+    min-width: 200px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    line-height: 1.5;
+    visibility: hidden;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    padding: 10px 12px;
+    opacity: 0;
+    bottom: 0;
+    transition: opacity var(--transition-normal), visibility var(--transition-normal);
+    box-shadow: var(--shadow-md);
+    z-index: 1000;
+}
+
+a.BJinfoBox span {
+    margin-left: -25px !important;
+}
+
+.post_return a.BJinfoBox span {
+    margin-left: -50px !important;
+}
+
+a:hover.BJinfoBox span {
+    visibility: visible;
+    bottom: 20px;
+    left: 40%;
+    margin-left: -76px;
+    z-index: 3;
+    opacity: 1;
+}
+
+[data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: help;
+}
+
+[data-tooltip]:after, [data-tooltip]:before {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+[data-tooltip]:before {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    min-width: 100px;
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: var(--shadow-md);
+}
+
+[data-tooltip]:after {
+    position: absolute;
+    bottom: calc(150% - 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-top-color: var(--accent-primary);
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+}
+
+[data-tooltip]:hover:after, [data-tooltip]:hover:before {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity var(--transition-normal), visibility var(--transition-normal);
+}
+
+a[data-tooltip]:hover {
+    text-decoration: none;
+}
 
 ul.bjqs {
     position: relative;
@@ -708,18 +655,19 @@ ul.bjqs-controls.v-centered li a:hover {
     box-shadow: var(--shadow-md);
 }
 
-ul.bjqs-controls.v-centered li.bjqs-next a {
-    margin-top: 207px;
-    right: 12px;
-    min-width: 83px;
+ul.bjqs-controls.v-centered li.bjqs-next a,
+ul.bjqs-controls.v-centered li.bjqs-prev a {
     position: absolute;
+    margin-top: 207px;
+    min-width: 83px;
+}
+
+ul.bjqs-controls.v-centered li.bjqs-next a {
+    right: 12px;
 }
 
 ul.bjqs-controls.v-centered li.bjqs-prev a {
-    margin-top: 207px;
     left: 36px;
-    min-width: 83px;
-    position: absolute;
 }
 
 ol.bjqs-markers {
@@ -748,7 +696,7 @@ ol.bjqs-markers li a {
     transition: all var(--transition-fast);
 }
 
-ol.bjqs-markers li a:hover,
+ol.bjqs-markers li a:hover, 
 ol.bjqs-markers li.active-marker a {
     background: var(--accent-primary);
 }
@@ -765,16 +713,6 @@ p.bjqs-caption {
     bottom: -10px;
 }
 
-#banner-fade,
-#banner-slide {
-    margin-bottom: 40px;
-    margin-top: -12px;
-}
-
-/* ============================================
-   CONTAINER E LAYOUT
-   ============================================ */
-
 #container {
     position: relative;
     width: 263px;
@@ -782,21 +720,43 @@ p.bjqs-caption {
     padding-bottom: 0;
 }
 
-.homesldframe {
-    height: 350px;
-    width: 250px;
-    left: -12px;
-    top: -4px;
-    position: relative;
+#banner-fade, #banner-slide {
+    margin-bottom: 40px;
+    margin-top: -12px;
 }
 
 .two_columns {
     width: 47%;
 }
 
-/* ============================================
-   ALERTA
-   ============================================ */
+.internalbox {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) !important;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 8px 12px !important;
+    color: #fff !important;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-normal);
+    float: none !important;
+    cursor: help;
+    border: none;
+    box-shadow: var(--shadow-sm);
+}
+
+.internalbox:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.internalbox::before {
+    content: "ⓘ" !important;
+    font-weight: 700 !important;
+    font-size: 12px !important;
+    color: #fff !important;
+    display: inline-block !important;
+    margin-right: 6px !important;
+    vertical-align: middle !important;
+}
 
 #noteAlertMsg {
     position: absolute;
@@ -811,6 +771,6 @@ p.bjqs-caption {
 
 .browse_rating {
     background: var(--bg-tertiary);
-    padding: var(--spacing-md);
+    padding: 8px;
     border-radius: var(--radius-sm);
 }
