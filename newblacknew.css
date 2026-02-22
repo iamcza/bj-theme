@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-size: 1.2rem; /* Tamanho do corpo do texto */
+    font-size: 1.1rem; /* Tamanho do corpo do texto */
     color: #bbb;
     min-width: 950px;
     background: url(https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png) repeat scroll 0 #1d1d1d !important;
@@ -42,11 +42,11 @@ h1, h2, h3, h4 {
 }
 h2 {
     text-align: center;
-    font-size: 1.9rem; /* Tamanho de H2 */
+    font-size: 1.6rem; /* Tamanho de H2 */
     color: #fff;
 }
 h4 {
-    font-size: 1.3rem; /* Tamanho de H4 */
+    font-size: 1.2rem; /* Tamanho de H4 */
 }
 p {
     margin: 10px 5px;
@@ -207,7 +207,7 @@ ul.thin li {
     top: 0px;
     width: 100%;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     z-index: 7001;
 }
 #menudrop ul {
@@ -500,7 +500,7 @@ p.min_padding {
     margin-bottom: 10px;
 }
 .box {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     background-color: #292929;
     margin-bottom: 10px;
     box-shadow: 1px 1px 10px #000000;
@@ -508,7 +508,7 @@ p.min_padding {
     border: 1px solid #303030;
 }
 .box2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     background-color: #282828;
     border: 1px solid #303030;
     margin-bottom: 10px;
