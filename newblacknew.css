@@ -32,23 +32,21 @@ html {
 }
 
 body {
-    font-size: 11.6px;
-    color: var(--text-primary);
+    font-size: 11px;
+    color: #bbb;
     min-width: 950px;
     background: url(https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png) repeat scroll 0 #1d1d1d !important;
-    font-family: 'Inter', 'Roboto', 'Segoe UI', tahoma, helvetica, sans-serif;
+    font-family: Roboto, tahoma, helvetica, sans-serif;
     overflow-wrap: break-word;
-    scroll-behavior: smooth;
 }
 a {
     text-decoration: none;
     border: none;
-    color: var(--accent-cyan);
-    transition: all var(--transition-fast);
+    color: #4d7c9a;
 }
-
 a:hover {
-    color: var(--accent-blue);
+    text-decoration: underline;
+    color: #aaa;
 }
 
 /* Links somente em conteúdo (não em navegação) */
@@ -212,11 +210,11 @@ ul.thin li {
     margin-top: 140px;
     width: 100%;
     text-align: center;
-    padding: 2em 0;
-    color: var(--text-light);
-    background: linear-gradient(180deg, rgba(5, 8, 22, 0.95) 0%, rgba(15, 22, 41, 0.9) 100%);
-    border-top: 1px solid rgba(99, 102, 241, 0.2);
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+    padding: 1em 0;
+    color: #fff;
+    background: #0d0d0d url(https://i.bj-share.info/d210bb554ad0ef1587d32763755ecc4d.png) repeat-x center 184px;
+    border-top: 5px solid #242424;
+    box-shadow: 0 0 10px 1px #000;
     clear: both;
 }
 #logo {
