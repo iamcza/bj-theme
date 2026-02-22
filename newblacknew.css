@@ -505,7 +505,10 @@ ul.thin li {
     margin-bottom: -60px;
     padding: 10px 0;
     width: 100%;
-    background: url(https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png) repeat scroll 0 var(--dark-bg) !important;
+    background-image: url(https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png);
+    background-repeat: repeat;
+    background-color: var(--dark-bg);
+    background-attachment: scroll;
     min-width: 850px;
 }
 
@@ -720,12 +723,15 @@ table {
     border-radius: var(--border-radius);
     overflow: hidden;
     background: rgba(26, 31, 58, 0.4);
+    display: table;
+    table-layout: auto;
 }
 
 tr {
     border: 1px solid rgba(99, 102, 241, 0.08);
     background-color: rgba(26, 31, 58, 0.5);
     transition: all var(--transition-fast);
+    display: table-row;
 }
 
 tr:hover {
@@ -740,6 +746,8 @@ td, th {
     border: 1px solid var(--border-color);
     padding: 5px;
     text-align: left;
+    display: table-cell;
+    vertical-align: middle;
 }
 tr.resolution_header,
 tr.season_header,
