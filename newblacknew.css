@@ -1956,3 +1956,133 @@ blockquote {
     }
 }
 
+/* === Premium Variant Layer (2026) === */
+:root {
+    --bg-primary: #0d0b08;
+    --bg-secondary: #16120d;
+    --bg-tertiary: #211a12;
+    --text-primary: #f5efe4;
+    --text-secondary: #c6b79e;
+    --accent-primary: #c6a86a;
+    --accent-secondary: #f0d69a;
+    --border-subtle: #3a2f21;
+    --border-medium: #5a4a34;
+    --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 16px 34px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 26px 46px rgba(0, 0, 0, 0.55);
+}
+
+body {
+    font-family: "Segoe UI Variable", "Palatino Linotype", "Book Antiqua", serif;
+    background:
+        radial-gradient(1000px 450px at 10% -10%, rgba(198, 168, 106, 0.12), transparent 70%),
+        radial-gradient(900px 400px at 90% -20%, rgba(240, 214, 154, 0.08), transparent 70%),
+        linear-gradient(150deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+h1, h2, h3, h4,
+.head,
+.colhead,
+.colhead td,
+.similar_artist_header {
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    background: linear-gradient(135deg, #e7d2a0, #b89457);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#menu,
+#userinfo,
+#footer {
+    background: linear-gradient(120deg, rgba(13, 11, 8, 0.9), rgba(22, 18, 13, 0.94));
+    border-color: rgba(198, 168, 106, 0.28);
+}
+
+.box,
+.box2,
+table,
+.alertbar,
+.autocomplete-suggestions,
+.open > .dropdown-menu,
+#searchbars input,
+input,
+textarea,
+select {
+    background: linear-gradient(160deg, rgba(22, 18, 13, 0.95), rgba(33, 26, 18, 0.9));
+    border-color: rgba(198, 168, 106, 0.28);
+}
+
+.box:hover {
+    border-color: rgba(240, 214, 154, 0.55);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
+}
+
+.head,
+.similar_artist_header,
+.internalbox,
+button,
+input[type=button],
+input[type=submit],
+a.similar_artist {
+    background: linear-gradient(135deg, #7a5a2e, #b89457) !important;
+    border-color: #c6a86a;
+    color: #fff8ea;
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+a.similar_artist:hover {
+    background: linear-gradient(135deg, #a07a42, #d8bb7d) !important;
+}
+
+.colhead,
+.colhead td {
+    background: linear-gradient(180deg, rgba(43, 32, 20, 0.98), rgba(29, 22, 14, 0.95)) !important;
+    border-bottom: 1px solid rgba(198, 168, 106, 0.35);
+}
+
+a,
+#userinfo a,
+.alertbar a,
+table.shoutTable a {
+    color: #e3ca8f;
+}
+
+a:hover,
+#userinfo a:hover,
+.alertbar a:hover,
+table.shoutTable a:hover {
+    color: #f5e1b4;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus,
+input[type=button]:focus,
+input[type=submit]:focus {
+    box-shadow: 0 0 0 3px rgba(198, 168, 106, 0.2);
+}
+
+blockquote {
+    background: linear-gradient(140deg, rgba(198, 168, 106, 0.12), rgba(240, 214, 154, 0.08));
+    border-left-color: #c6a86a;
+}
+
+::-webkit-scrollbar-track {
+    background: #15110c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #7a5a2e, #b89457);
+    border: 2px solid #15110c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #a07a42, #d8bb7d);
+}
