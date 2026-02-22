@@ -505,10 +505,7 @@ ul.thin li {
     margin-bottom: -60px;
     padding: 10px 0;
     width: 100%;
-    background-image: url(https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png);
-    background-repeat: repeat;
-    background-color: var(--dark-bg);
-    background-attachment: scroll;
+    background-color: rgba(10, 14, 39, 0.5);
     min-width: 850px;
 }
 
@@ -1070,11 +1067,13 @@ tr.group:hover {
     /vertical-align: middle;
 }
 .group_torrent span {
-    float: right;
+    display: inline;
+    margin-left: 8px;
 }
 .torrent span {
     font-weight: 400;
-    float: right;
+    display: inline;
+    margin-left: 8px;
 }
 .nobr {
     white-space: nowrap;
