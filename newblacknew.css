@@ -4,11 +4,11 @@ html {
 }
 
 body {
-    font-size: 1.1rem; /* Tamanho do corpo do texto */
+    font-size: 1.4rem; /* Tamanho do corpo do texto (14px) */
     color: #bbb;
     min-width: 950px;
     background: url(https://i.bj-share.info/ec01898d04940834f4312bb56df3f8c6.png) repeat scroll 0 #1d1d1d !important;
-    font-family: 'Inter', 'Roboto', 'Segoe UI', tahoma, helvetica, sans-serif; /* Fonte moderna */
+    font-family: Roboto, tahoma, helvetica, sans-serif;
     overflow-wrap: break-word;
 }
 a {
@@ -42,11 +42,11 @@ h1, h2, h3, h4 {
 }
 h2 {
     text-align: center;
-    font-size: 1.6rem; /* Tamanho de H2 */
+    font-size: 1.8rem; /* Tamanho de H2 (18px) */
     color: #fff;
 }
 h4 {
-    font-size: 1.2rem; /* Tamanho de H4 */
+    font-size: 1.4rem; /* Tamanho de H4 (14px) */
 }
 p {
     margin: 10px 5px;
@@ -207,7 +207,7 @@ ul.thin li {
     top: 0px;
     width: 100%;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* (13px) */
     z-index: 7001;
 }
 #menudrop ul {
@@ -222,7 +222,7 @@ ul.thin li {
     color: #ccc;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* (13px) */
     line-height: 32px;
     padding: 0 15px;
 }
@@ -286,7 +286,7 @@ ul.thin li {
     padding: 4px 0px;
     width: 100%;
     text-align: center;
-    font-size: 1.1rem;
+    /* font-size will be inherited from body (1.4rem) */
     box-shadow: 0px 5px 10px 0px black;
     z-index: 1000;
 }
@@ -334,7 +334,7 @@ ul.thin li {
     background: #1c1c1c;
     color: #777;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* (12px) */
     padding: 3px 0;
     z-index: 10;
     border-radius: 4px;
@@ -347,7 +347,7 @@ ul.thin li {
     background: #1c1c1c;
     color: #777;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* (12px) */
     padding: 3px 0;
     z-index: 10;
     border-radius: 4px;
@@ -500,7 +500,7 @@ p.min_padding {
     margin-bottom: 10px;
 }
 .box {
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* (13px) */
     background-color: #292929;
     margin-bottom: 10px;
     box-shadow: 1px 1px 10px #000000;
@@ -508,7 +508,7 @@ p.min_padding {
     border: 1px solid #303030;
 }
 .box2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* (13px) */
     background-color: #282828;
     border: 1px solid #303030;
     margin-bottom: 10px;
@@ -635,7 +635,7 @@ td.colhead {
 }
 .colhead .sign {
     padding: 0 8px 0 8px;
-    font-size: 1.6rem;
+    font-size: 1.8rem; /* (18px) */
     font-weight: 700;
     vertical-align: middle;
 }
@@ -783,7 +783,7 @@ ul.poll li.graph {
     padding: 0 8px 0 8px;
     vertical-align: middle;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.8rem; /* (18px) */
     font-weight: 700;
 }
 .torrentinfo_release {
@@ -1571,7 +1571,7 @@ p.bjqs-caption {
 
 .internalbox {
   background: #202326 !important;
-  font-size: 11px;
+  font-size: 1.1rem; /* 11px */
   padding: 1px 2px !important;
   color: #ffb300 !important;
   border-left: 3px solid #ffb300;
@@ -1585,11 +1585,12 @@ p.bjqs-caption {
 .internalbox:hover {
   background: #353537;
 }
+
 .internalbox::before {
   content: "\f2f7" !important;
   font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free" !important;
   font-weight: 900 !important;
-  font-size: 10px !important;
+  font-size: 1rem !important; /* 10px */
   color: #fffbee !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -1601,15 +1602,6 @@ p.bjqs-caption {
   text-indent: 0 !important;
 }
 
-.internalbox {
-    background: #2f4879 none repeat scroll 0 0;
-    font-size: 11px;
-    font-weight: bold;
-    padding: 0px 5px;
-    color:#fff;
-    float: none !important;
-    cursor: help;
-}
 #noteAlertMsg {
     position: absolute;
     z-index: 6001;
